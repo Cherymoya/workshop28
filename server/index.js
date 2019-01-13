@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 const Koa = require('koa');
 const Router = require('koa-router');
@@ -17,6 +18,12 @@ app.use(compress({
 app.use(bodyParser());
 
 const router = new Router();
+
+const swSource = fs.readFileSync(path.join(__dirname, '..', 'dist', 'assets', 'sw.js'));
+router.get('/sw.js', async (ctx) => {
+  ctx.response.type = 'application/javascript';
+  ctx.response.body = swSource;
+});
 
 app.use(router.routes());
 app.use(router.allowedMethods());
