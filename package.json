@@ -1,0 +1,65 @@
+{
+  "name": "warsawJS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm-run-all --parallel dev:server dev:client",
+    "dev:server": "nodemon server/index.js",
+    "dev:client": "webpack-dev-server --config client/config/webpack.js --env.development",
+    "build": "webpack --config client/config/webpack.js --env.production",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cherymoya/workshop28.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Małgorzata Sawicka",
+    "email": "saepetristis@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cherymoya/workshop28/issues"
+  },
+  "homepage": "https://github.com/Cherymoya/workshop28#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "html-webpack-harddisk-plugin": "^1.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "npm-run-all": "^4.1.5",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/polyfill": "^7.2.5",
+    "@koa/cors": "^2.2.3",
+    "dialog-polyfill": "^0.4.10",
+    "http2": "^3.3.7",
+    "koa": "^2.6.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compress": "^3.0.0",
+    "koa-favicon": "^2.0.1",
+    "koa-router": "^7.4.0",
+    "koa-sslify": "^4.0.2",
+    "koa-static": "^5.0.0",
+    "lit-html": "^0.14.0",
+    "material-design-lite": "^1.3.0",
+    "webpack-pwa-manifest": "^4.0.0"
+  }
+}
