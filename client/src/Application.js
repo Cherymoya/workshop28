@@ -40,4 +40,4 @@ export default class Application {
     start(){
         render(template(), this.rootEl);
     }
-}
+};

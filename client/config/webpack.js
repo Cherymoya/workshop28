@@ -15,8 +15,8 @@ const distDir = path.join(rootDir, 'dist');
 const distAssetsDir = path.join(distDir, publicAssetsPath);
 
 module.exports = (env) => {
- const isDevelopment = !env.production;
-    return {
+  const isDevelopment = !env.production;
+  return {
     context: contextDir,
     entry: {
       index: path.join(__dirname, '..', 'src', 'index.js'),
@@ -84,6 +84,9 @@ module.exports = (env) => {
     ],
     devServer: {
       stats: 'errors-only',
+      proxy: {
+        '/sw.js': 'http://localhost:8080/assets/',
+      },
     },
   };
 };

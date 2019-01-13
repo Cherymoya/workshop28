@@ -1,1 +1,3 @@
-console.warn('Hello, PWA!');
+import '@babel/polyfill';
+
+console.warn("Hello PWA");
